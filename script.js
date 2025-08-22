@@ -1,3 +1,22 @@
+// mobile navbar 
+// Mobile navbar functionality
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const mobileNavLinks = document.querySelector('.mobile-nav-links');
+
+hamburgerMenu.addEventListener('click', () => {
+  hamburgerMenu.classList.toggle('active');
+  mobileNavLinks.classList.toggle('active');
+});
+
+// Close menu when clicking on links
+const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburgerMenu.classList.remove('active');
+    mobileNavLinks.classList.remove('active');
+  });
+});
+// mobile navbar end 
 let slides = document.querySelectorAll(".slide");
 let dots = document.querySelectorAll(".dot");
 let currentIndex = 0;
